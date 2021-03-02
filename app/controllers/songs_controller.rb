@@ -28,7 +28,7 @@ class SongsController < ApplicationController
 
    #
    post '/songs' do
-          # binding.pry
+           binding.pry
           @song = Song.create(params[:song])  #same params[:song][:name]
 
                   if !(!Artist.find_by(name: params[:artist][:name]))
